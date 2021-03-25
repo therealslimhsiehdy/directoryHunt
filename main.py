@@ -10,19 +10,17 @@ app = FastAPI()
 @app.get("/")
 @app.get("/{full_path:path}")
 
-'''
-INPUT: A path in str type
-OUTPUT: JSON format of a directory showing the file name, owner, size, and permissions
-DESCRIPTION:
-directoryHunt takes in a path given by the user. We run the "ls -la" OS command on the path 
-and translate the output into JSON format
-'''
-def directoryHunt(full_path: str = ""):
-
+def directoryHunt(full_path: str = "", filepath = "/mnt/mydata"):
+    """
+    INPUT: A path in str type
+    OUTPUT: JSON format of a directory showing the file name, owner, size, and permissions
+    DESCRIPTION:
+    directoryHunt takes in a path given by the user. We run the "ls -la" OS command on the path 
+    and translate the output into JSON format
+    """
+    
     all_files = []
     return_dir = []
-
-    filepath = "/mnt/mydata"
 
     try:
         stream = subprocess.check_output(["ls", "-la", filepath + "/" + full_path])

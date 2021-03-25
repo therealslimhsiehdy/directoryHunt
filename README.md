@@ -1,8 +1,7 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 </br>
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-### Directory Hunt
+# Directory Hunt
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
@@ -31,14 +30,16 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Take home assignment for WeaveGrid 
+A GET REST API that takes in a path given by the user. We run the "ls -la" 
+OS command on the path and translate the output into JSON format. This
+application is Dockerized with unit tests.
 
 ### Built With
 
 * [Docker](https://www.docker.com/)
 * [Python](https://www.python.org/downloads/)
 * [FastAPI](https://fastapi.tiangolo.com/)
-* [Black](https://github.com/psf/black)
+* [Pytest](https://docs.pytest.org/en/stable/)
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -52,11 +53,21 @@ Take home assignment for WeaveGrid
 
 ### Installation
 
-1. Run
+1. Run in terminal of your choice:
    ```sh
    ./getpath.sh
    ```
-   (in terminal of your choice)
+
+2. Open in browser of your choice this link:
+   ```
+   http://0.0.0.0:80
+   ```
+
+### Testing
+* Run Pytest
+   ```sh
+   pytest
+   ```
 
 ### Docs
 
