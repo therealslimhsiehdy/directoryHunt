@@ -1,5 +1,8 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
+</br>
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+### Directory Hunt
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
@@ -55,29 +58,14 @@ Take home assignment for WeaveGrid
    ```
    (in terminal of your choice)
 
+### Docs
+
+See swagger.yaml file in the repository for Swagger style documentation
+
 <!-- CONTACT -->
 ## Contact
 
 Rebecca Hsieh - rebecca.hsieh07@gmail.com - therealslimhsiehdy.com
-
-
-
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Img Shields](https://shields.io)
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Pages](https://pages.github.com)
-* [Animate.css](https://daneden.github.io/animate.css)
-* [Loaders.css](https://connoratherton.com/loaders)
-* [Slick Carousel](https://kenwheeler.github.io/slick)
-* [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
-* [Sticky Kit](http://leafo.net/sticky-kit)
-* [JVectorMap](http://jvectormap.com)
-* [Font Awesome](https://fontawesome.com)
-
-
-
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
