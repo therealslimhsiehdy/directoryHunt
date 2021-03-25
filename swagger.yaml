@@ -32,7 +32,7 @@ paths:
                   example: "drwxr-xr-x"
                 owner:
                   type: "string"
-                  example: "rebeccahsieh"
+                  example: "therealslimhsiehdy"
                 group:
                   type: "string"
                   example: "staff"

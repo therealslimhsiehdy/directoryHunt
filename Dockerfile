@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 
-MAINTAINER Rebecca "rebecca.hsieh07@gmail.com"
+MAINTAINER Rebecca Hsieh "rebecca.hsieh07@gmail.com"
 
 RUN apt-get update && apt-get install -y \
         software-properties-common
