@@ -1,0 +1,84 @@
+swagger: "2.0"
+info:
+  description: "This is a small application to display file information from a user's file system"
+  version: "1.0.0"
+  title: "Directory Hunt"
+  termsOfService: "http://swagger.io/terms/"
+  contact:
+    email: "apiteam@swagger.io"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+schemes:
+- "https"
+- "http"
+paths:
+  /:
+    get:
+      summary: "Returns information regarding files in a directory"
+      description: "Specifics include permissions, owner, group, size of file, names of files"
+      produces:
+      - "application/json"
+      parameters: []
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            type: "array"
+            items:
+              type: "object"
+              properties:
+                permission:
+                  type: "string"
+                  example: "drwxr-xr-x"
+                owner:
+                  type: "string"
+                  example: "rebeccahsieh"
+                group:
+                  type: "string"
+                  example: "staff"
+                size:
+                  type: "integer"
+                  example: 256
+                name:
+                  type: "string"
+                  example: "file_name"
+  /{path}:
+    get:
+      summary: "Returns information regarding files in a directory"
+      description: "Specifics include permissions, owner, group, size of file, names of files"
+      produces:
+      - "application/json"
+      parameters: 
+        - in: path
+          name: path
+          type: "string"
+          required: true
+          description: "an added path folder provided by user"
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            type: "array"
+            items:
+              type: "object"
+              properties:
+                permission:
+                  type: "string"
+                  example: "drwxr-xr-x"
+                owner:
+                  type: "string"
+                  example: "therealslimhsiehdy"
+                group:
+                  type: "string"
+                  example: "staff"
+                size:
+                  type: "integer"
+                  example: 512
+                name:
+                  type: "string"
+                  example: "file_name"
+                  
+externalDocs:
+  description: "Find out more about Swagger"
+  url: "http://swagger.io"
