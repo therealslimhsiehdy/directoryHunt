@@ -3,13 +3,19 @@
 # This script essentially asks for a directory path for the GET call to run with
 # I am assuming the user already has docker downloaded and we do a quick cleanup after 
 
-echo "Hi there! Please provide a valid directory path for me to use."
+echo "Hi there! Please provide a valid absolute directory path for me to use."
 
 read pathName
 
 if [[ ! -e $pathName ]]
 then
 	echo "That path does not exist"
+	exit 1
+fi
+
+if [[ $pathName == "."* ]]
+then
+	echo "Cannot accept any '.'s in input"
 	exit 1
 fi
 

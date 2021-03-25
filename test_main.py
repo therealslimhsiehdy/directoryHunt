@@ -18,28 +18,28 @@ def test_directoryHunt():
 
         response = main.directoryHunt(directory, "")
         assert json.loads(response) == [
-               {
-                  "permission":"drwx------",
-                  "owner":"rebeccahsieh",
-                  "group":"staff",
-                  "size":"96",
-                  "name":"."
-               },
-               {
-                  "permission":"drwx------@",
-                  "owner":"rebeccahsieh",
-                  "group":"staff",
-                  "size":"4000",
-                  "name":".."
-               },
-               {
-                  "permission":"-rw-r--r--",
-                  "owner":"rebeccahsieh",
-                  "group":"staff",
-                  "size":"20",
-                  "name":"randomfile.txt"
-               }
-            ]
+            {
+                "permission":"drwx------",
+                "owner":"rebeccahsieh",
+                "group":"staff",
+                "size":"96",
+                "name":"."
+            },
+            {
+                "permission":"drwx------@",
+                "owner":"rebeccahsieh",
+                "group":"staff",
+                "size":"3968",
+                "name":".."
+            },
+            {
+                "permission":"-rw-r--r--",
+                "owner":"rebeccahsieh",
+                "group":"staff",
+                "size":"35",
+                "name":"randomfile.txt"
+            }
+        ]
 
 def test_directoryHunt_nofile():
     with tempfile.TemporaryDirectory() as directory:
@@ -47,18 +47,31 @@ def test_directoryHunt_nofile():
 
         response = main.directoryHunt(directory, "")
         assert json.loads(response) == [
-               {
-                  "permission":"drwx------",
-                  "owner":"rebeccahsieh",
-                  "group":"staff",
-                  "size":"64",
-                  "name":"."
-               },
-               {
-                  "permission":"drwx------@",
-                  "owner":"rebeccahsieh",
-                  "group":"staff",
-                  "size":"4000",
-                  "name":".."
-               }
-            ]
+            {
+                "permission":"drwx------",
+                "owner":"rebeccahsieh",
+                "group":"staff",
+                "size":"64",
+                "name":"."
+            },
+            {
+                "permission":"drwx------@",
+                "owner":"rebeccahsieh",
+                "group":"staff",
+                "size":"3968",
+                "name":".."
+            }
+        ]
+
+def test_directoryHunt_periodinput():
+    response = main.directoryHunt(".")
+    assert json.loads(response) == {
+        "error": "Please put in a valid path"
+    }
+
+def test_directoryHunt_multiperiodinput():
+    response = main.directoryHunt("..")
+    print("!! response is ", response)
+    assert json.loads(response) == {
+        "error": "Please put in a valid path"
+    }
