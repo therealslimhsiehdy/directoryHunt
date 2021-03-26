@@ -57,6 +57,7 @@ application is Dockerized with unit tests.
    ```sh
    ./getpath.sh
    ```
+NOTE: Some paths you may need give Docker permission to access!
 
 2. Open in browser of your choice this link:
    ```
